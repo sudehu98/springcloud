@@ -1,0 +1,26 @@
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      #defaultZone: http://eureka1:7001/eureka/,http://eureka2:7002/eureka/
+      defaultZone: http://eureka1:7001/eureka/
+
+spring:
+  application:
+    name: cloud-order-service
+
+ribbon:
+  #指的是简历连接所用的时间，适用于网络正常的情况下，两端连接所用的时间。
+  ReadTimeout: 5000
+  #指的是建立链接后从服务器读取到可用资源所用的时间
+  ConnectTimeout: 5000
+logging:
+  level:
+    #feign日志以什么级别监控哪个接口
+    com.su.springcloud.service.PaymentFeignService: debug
+feign:
+  hystrix:
+    enabled: true

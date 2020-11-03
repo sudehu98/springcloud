@@ -1,0 +1,15 @@
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: eureka1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka1:7001/eureka/
+      #defaultZone: http://eureka2:7002/eureka/
+  #自我保护模式
+  server:
+    enable-self-preservation: false
+    a-s-g-cache-expiry-timeout-ms: 2000
