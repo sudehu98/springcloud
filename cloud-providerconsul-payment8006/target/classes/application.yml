@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: consul-payment-service
+    name: consul-payment-provider
   cloud:
     consul:
       host: localhost

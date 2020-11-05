@@ -24,6 +24,11 @@ public class PaymentController {
     @Resource
     private DiscoveryClient discoveryClient;
 
+    @GetMapping("/payment/lb")
+    public String loadBalance(){
+        return this.serverPort;
+    }
+
     @PostMapping(value = "payment/create")
     public CommonResult create(@RequestBody Payment payment) {
         int result = paymentService.create(payment);
