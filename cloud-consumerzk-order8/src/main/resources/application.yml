@@ -1,0 +1,15 @@
+server:
+  port: 81
+
+spring:
+  cloud:
+    zookeeper:
+      connect-string: 192.168.188.128:2181
+  application:
+    name: cloud-consumer-order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/db03?useSSL=FALSE&serverTimezone=UTC&allowPublicKeyRetrieval=TRUE
+    username: root
+    password: 123456
